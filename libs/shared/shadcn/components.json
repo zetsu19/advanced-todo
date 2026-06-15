@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "radix-nova",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "apps/todo/todo-web/src/app/global.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@advanced-monorepo/shadcn",
+    "ui": "@advanced-monorepo/shadcn/ui",
+    "utils": "@advanced-monorepo/shadcn/utils",
+    "lib": "@advanced-monorepo/shadcn/lib",
+    "hooks": "@advanced-monorepo/shadcn/hooks"
+  },
+  "iconLibrary": "lucide"
+}
