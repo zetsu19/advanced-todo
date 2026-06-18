@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import './global.css';
+import './globals.css';
 import { ApolloProvider } from './provider/ApolloProvider';
 
 export const metadata: Metadata = {

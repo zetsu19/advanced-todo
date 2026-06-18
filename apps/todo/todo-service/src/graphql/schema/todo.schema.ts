@@ -15,11 +15,12 @@ export const todoTypeDefs = gql`
     xpReward: Int!
   }
 
-  type Query {
-    getTodoByUserId(userId: ID!): [Todo]!
+  type Response {
+    message: String!
   }
 
   type Mutation {
-    createTodo(input: TodoInput): Response!
+    createTodo(userId: ID!, input: TodoInput!): Response!
+    deleteTodoById(id: ID!): Response!
   }
 `;

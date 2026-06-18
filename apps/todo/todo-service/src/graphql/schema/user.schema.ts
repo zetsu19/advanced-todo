@@ -15,9 +15,11 @@ export const userTypeDefs = gql`
 
   type Query {
     getUsers: [User]!
+    getUserById(userId: String!): User
   }
 
   type Mutation {
     createUser(name: String!): Response!
+    deleteUserById(id: ID!): Response!
   }
 `;
