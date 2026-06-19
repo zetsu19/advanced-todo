@@ -6,8 +6,9 @@
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": ["{projectRoot}/.next"],
-      "options": {}
+      "options": {
+        "outputPath": "dist/apps/todo-web"
+      }
     },
     "start": {
       "executor": "@nx/next:start"
