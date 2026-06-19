@@ -2,7 +2,7 @@ import { Context } from '../../../types/index';
 
 export const deleteUserById = async (
   _: unknown,
-  args: { id: number },
+  args: { id: string },
   context: Context,
 ) => {
   const { db } = context;

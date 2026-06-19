@@ -10,17 +10,19 @@ const DELETE_USER_BY_ID = gql`
 `;
 
 type DeleteUserByIdVariables = {
-  deleteUserById: string;
+  deleteUserByIdId: string;
 };
 
-export default function Page(id: string) {
-  const [deleteUserById, { loading: deletingUser }] =
-    useMutation<DeleteUserByIdVariables>(DELETE_USER_BY_ID);
+export default function useDeleteUserById(id?: string) {
+  const [deleteUserById, { loading: deletingUser }] = useMutation<
+    any,
+    DeleteUserByIdVariables
+  >(DELETE_USER_BY_ID);
 
-  const handleDeleteUserById = async (id: string) => {
+  const handleDeleteUserById = async (userId?: string) => {
     try {
       const res = await deleteUserById({
-        variables: { deleteUserByIdId: id },
+        variables: { deleteUserByIdId: userId || id || '' },
       });
       return res.data?.deleteUserById;
     } catch (err) {

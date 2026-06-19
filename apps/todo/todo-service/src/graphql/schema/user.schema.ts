@@ -21,5 +21,6 @@ export const userTypeDefs = gql`
   type Mutation {
     createUser(name: String!): Response!
     deleteUserById(id: ID!): Response!
+    completeTodo(todoId: ID!, userId: ID!): Response!
   }
 `;

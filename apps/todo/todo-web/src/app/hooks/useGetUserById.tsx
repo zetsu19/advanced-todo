@@ -20,9 +20,9 @@ type User = {
 };
 
 export default function Page(Id: string | undefined) {
-  const { data, loading, error } = useQuery<{ getUserById: User }>(
+  const { data, loading, error, refetch } = useQuery<{ getUserById: User }>(
     GET_USER_BY_ID,
     { variables: { userId: Id as string }, skip: !Id },
   );
-  return { data, loading, error };
+  return { data, loading, error, refetch };
 }

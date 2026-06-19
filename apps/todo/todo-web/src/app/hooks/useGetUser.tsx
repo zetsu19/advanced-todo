@@ -20,7 +20,9 @@ type User = {
 };
 
 export default function useGetUser() {
-  const { data, loading } = useQuery<{ getUsers: User[] }>(GET_USERS);
+  const { data, loading, error, refetch } = useQuery<{ getUsers: User[] }>(
+    GET_USERS,
+  );
 
-  return { data, loading };
+  return { data, loading, error, refetch };
 }

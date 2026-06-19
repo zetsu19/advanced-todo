@@ -19,20 +19,20 @@ interface DeleteTodoVariables {
   deleteTodoByIdId: string;
 }
 
-export default function useDeleteTodo() {
-  const [deleteTodoByIdId, loading] = useMutation<
+export default function useDeleteTodoById() {
+  const [deleteTodo, { loading }] = useMutation<
     DeleteTodoData,
     DeleteTodoVariables
   >(DELETE_TODO_BY_ID);
 
   const handleDeleteTodoById = async (id: string) => {
     try {
-      const res = await deleteTodoByIdId({
+      const res = await deleteTodo({
         variables: { deleteTodoByIdId: id },
       });
       return res.data?.deleteTodoById;
     } catch (err) {
-      throw new Error('Failed to delete todo');
+      throw new Error('Failed useDeleteTodoById');
     }
   };
 
