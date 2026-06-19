@@ -6,7 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": [".next"],
+      "outputs": ["{projectRoot}/.next"],
       "options": {}
     },
     "start": {
