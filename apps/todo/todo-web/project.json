@@ -5,7 +5,9 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nx/next:build"
+      "executor": "@nx/next:build",
+      "outputs": [".next"],
+      "options": {}
     },
     "start": {
       "executor": "@nx/next:start"
